@@ -11,7 +11,7 @@ def maximo_recursivo(*args) -> float:
         - No utilizar la ninguna otra función salvo maximo_recursivo
         - Resolver de manera recursiva
     """
-
+    
 
 # NO MODIFICAR - INICIO
 if __name__ == "__main__":
