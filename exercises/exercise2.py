@@ -1,6 +1,7 @@
 """Comparaciones Encadenadas, Cantidad Arbitraria de Parámetros, Recursividad.
 """
-
+# x == y and y == z
+# x == y == z
 
 def maximo_encadenado(a: float, b: float, c: float) -> float:
     """Toma 3 números y devuelve el máximo.
@@ -13,12 +14,11 @@ def maximo_encadenado(a: float, b: float, c: float) -> float:
 
     Referencia: https://docs.python.org/3/reference/expressions.html#comparisons # noqa: E501
     """
-    mayor = a
-    if b > mayor:
-        mayor = b
-    if c > mayor:
-        mayor = c
-    return mayor
+    if b < a > c:
+        return a
+    if b > c:
+        return b
+    return c
 
 # NO MODIFICAR - INICIO
 assert maximo_encadenado(1, 10, 5) == 10
