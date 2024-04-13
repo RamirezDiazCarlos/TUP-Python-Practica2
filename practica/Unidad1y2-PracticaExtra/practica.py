@@ -8,8 +8,7 @@ else:
 # 2. Escribe un programa que tome una lista de números y calcule la suma de todos los
 # elementos.
 """lista = [1,2,3,4,5,6]
-suma = sum(lista)
-print(suma)"""
+print(sum(lista))"""
 # 3. Escribe un programa que imprima los números del 1 al 10 utilizando un bucle while.
 """x = 1
 while x <= 10:
@@ -57,14 +56,47 @@ print(es_primo(7))"""
 # 9. Escribe una función llamada eliminar_duplicados que tome una lista como argumento y
 # devuelva una nueva lista con los elementos únicos de la lista original, manteniendo el
 # orden.
+"""def eliminar_duplicado(lista):
+    unicos = []
+    for x in lista:
+        if x not in unicos:
+            unicos.append(x)
+    return unicos
 
+lista = [1,1,2,2,3,3,4,4,5,5]
+print(eliminar_duplicado(lista))"""
 # 10. Escribe un programa que pida al usuario ingresar una lista de números y luego imprima
 # el mayor de ellos utilizando una función llamada encontrar_mayor.
+"""def encontrar_mayor(lista):
+    mayor = 0
+    for x in lista:
+        if x > mayor:
+            mayor = x
+    return mayor
 
+lista = []
+for x in range(5):
+    z = int(input("ingrese un número: "))
+    lista.append(z)
+
+print(encontrar_mayor(lista))"""
 # 11. Escribe una función para contar vocales en una cadena
+"""def vocales(cadena):
+    vocales = "aeiou"
+    contador = 0
+    for x in cadena:
+        if x in vocales:
+            contador += 1
+    return contador
 
+cadena = "como estas"
+print(vocales(cadena))"""
 # 12. Escribe una función que devuelve una copia de una lista en orden invertido.
+"""def lista_invertida(lista):
+    return lista[::-1]
 
+lista = [1,2,3,4,5]
+print(lista_invertida(lista))"""
 # 13. Escribe un programa que ordene una lista de números de forma ascendente utilizando
 # una expresión lambda.
 
