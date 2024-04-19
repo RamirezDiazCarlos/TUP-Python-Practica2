@@ -99,38 +99,85 @@ lista = [1,2,3,4,5]
 print(lista_invertida(lista))"""
 # 13. Escribe un programa que ordene una lista de números de forma ascendente utilizando
 # una expresión lambda.
-
+"""lista = [4,2,5,7,3,6,1]
+lista_ordenada = sorted(lista)
+print(lista_ordenada)"""
 # 14. Escribe un programa que ordene una lista de cadenas por longitud, de la más corta a la
 # más larga, utilizando una expresión lambda.
-
+"""lista = ["oro", "cobre", "hierro", "plata", "aluminio"]
+lista_ordenada = sorted(lista, key = lambda x : len(x))
+print(lista_ordenada)"""
 # 15. Escribe un programa que filtre los números pares de una lista utilizando una expresión
 # lambda.
-
+"""lista = [1,2,3,4,5,6,7,8,9,10,11]
+pares = list(filter(lambda x : x % 2 == 0, lista))
+print(pares)"""
 # 16. Escribe un programa que filtre los números impares de una lista utilizando una
 # expresión lambda.
-
+"""lista = [1,2,3,4,5,6,7,8,9,10,11]
+pares = list(filter(lambda x : x % 2 != 0, lista))
+print(pares)"""
 # 17. Escribe una función que filtre las palabras de una lista que comiencen con una letra
 # específica utilizando una expresión lambda.
-
+"""palabras=["Rosario", "Buenos Aires", "Cordóba", "San Luis", "Mendoza"]
+letra="M"
+palabras_con_x = list(filter(lambda x: x[0] == letra, palabras))
+print(palabras_con_x)"""
 # 18. Escribe un programa que ordene una lista de tuplas por el valor del segundo elemento
 # de cada tupla utilizando una expresión lambda.
-
+"""lista_tuplas = [(4,5), (21,3), (54,2), (74,4), (23,1)]
+tuplas_ordenadas = sorted(lista_tuplas, key=lambda x : x[1])
+print(tuplas_ordenadas)"""
 # 19. Escribe un programa que filtre los números primos de una lista utilizando una expresión
 # lambda y una función auxiliar para verificar si un número es primo.
+"""def primo(num):
+    if num <= 1:
+        return False
+    for x in range(2, num):
+        if num % x == 0:
+            return False
+    return True
 
+lista = [4,8,10,91,5,42,38,8,9,7,15,79,37,45,1]
+numeros_primos = list(filter(lambda x : primo(x), lista))
+print(numeros_primos)"""
 # 20. Escribe un programa que ordene una lista de diccionarios por el valor de una clave
 # específica en cada diccionario utilizando una expresión lambda.
+"""lista_diccionario = [
+    {'nombre': 'Carlos', 'edad': 33},
+    {'nombre': 'Cecilia', 'edad': 33},
+    {'nombre': 'Daniel', 'edad': 43},
+    {'nombre': 'Germán', 'edad': 26}
+]
 
+lista_ordenada = sorted(lista_diccionario, key=lambda x : x['edad'])
+for x in lista_ordenada:
+    print(x)"""
 # 21. Escribe una función que filtre los elementos de una lista numérica qué no sean primos
 # utilizando una expresión lambda.
+"""def primo(num):
+    if num <= 1:
+        return True
+    for x in range(2, num):
+        if num % x == 0:
+            return True
+    return False
 
+lista = [4,8,10,91,5,42,38,8,9,7,15,79,37,45,1]
+numeros_primos = list(filter(lambda x : primo(x), lista))
+print(numeros_primos)"""
 # 22. En un módulo separado, escribe una función que filtre los elementos de una lista de
 # string qué su longitud sea mayor a 5 utilizando una expresión lambda.
-
+"""from fun import mas_5
+palabras = ["elefante", "gato", "perro", "computadora", "montaña"]
+print(mas_5(palabras))"""
 # 23. En un módulo separado, escribe una función que filtre los elementos de una lista de
 # string qué su longitud sea mayor a x (pasado cómo parámetro) utilizando una expresión
 # lambda.
-
+from fun import max_x
+palabras = ["elefante", "gato", "perro", "computadora", "montaña"]
+letras = 7
+print(max_x(palabras, letras))
 # 24. En un módulo separado, escribe una función que ordene una lista de cadenas ignorando
 # las diferencias entre mayúsculas y minúsculas utilizando una expresión lambda.
 
